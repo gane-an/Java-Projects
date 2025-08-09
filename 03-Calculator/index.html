@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Calculator</div>
+      <div class="input-box">
+        <label for="a">
+          <input type="text" placeholder="Enter the value" id="a" />
+        </label>
+      </div>
+      <div class="input-box">
+        <label for="b">
+          <input type="text" placeholder="Enter the value" id="b" />
+        </label>
+      </div>
+      <div class="input-box">
+        <label for="operator">
+          <select name="operator" id="operator">
+            <option value="">--select--</option>
+            <option value="+">Add</option>
+            <option value="-">Subtract</option>
+            <option value="*">Multiply</option>
+            <option value="/">Division</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="input-box">
+        <label>
+          <button type="button" onclick="calculate()">Calculate</button>
+        </label>
+      </div>
+      <div class="input-box">
+        <p>Output: <span id="result">THe result</span></p>
+      </div>
+    </div>
+  </body>
+  <script>
+    function calculate() {
+      let a = Number(document.getElementById("a").value);
+      let b = Number(document.getElementById("b").value);
+      let op = document.getElementById("operator").value;
+      let result;
+      switch (op) {
+        case "+": {
+          result = a + b;
+          break;
+        }
+        case "-": {
+          result = a - b;
+          break;
+        }
+        case "*": {
+          result = a * b;
+          break;
+        }
+        case "/": {
+          if (b == 0) {
+            result = "Cant divide by zero";
+            break;
+          }
+          result = a / b;
+          break;
+        }
+        default:
+          {
+            result = "Choose the operator";
+          }
+          break;
+      }
+      document.getElementById("result").textContent = result;
+    }
+  </script>
+</html>

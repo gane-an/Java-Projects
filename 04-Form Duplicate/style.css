@@ -1,0 +1,134 @@
+/* Reset & Basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #bce0fa, #f880a8);
+  padding: 20px;
+}
+
+/* Form Container */
+.form-con {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid #ddd;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Title */
+.f-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Input Rows */
+.box {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.l-w {
+  min-width: 100px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Text Inputs & Select */
+input[type="text"],
+select {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #2196f3;
+}
+
+/* Inline Options (Radio & Checkboxes) */
+.inline-group label,
+.c-box label {
+  margin-right: 15px;
+  font-size: 0.95rem;
+}
+
+.c-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+}
+
+/* Submit Button */
+.submit-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-box input {
+  background: #2196f3;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-box input:hover {
+  background: #1976d2;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Friendly */
+@media (max-width: 500px) {
+  .form-con {
+    padding: 20px;
+  }
+  .l-w {
+    min-width: 100%;
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  select {
+    width: 100%;
+  }
+  .box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .submit-box {
+    justify-content: center;
+  }
+}

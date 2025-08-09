@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Detail Form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form class="form-con">
+      <h2 class="f-title">Student Detail</h2>
+
+      <div class="box">
+        <label for="name" class="l-w">Name:</label>
+        <input
+          type="text"
+          name="sName"
+          id="name"
+          placeholder="Enter your name"
+        />
+      </div>
+
+      <div class="box">
+        <label for="depart" class="l-w">Department:</label>
+        <select name="depart" id="depart">
+          <option value="">--Select--</option>
+          <option value="CSE">CSE</option>
+          <option value="IT">IT</option>
+          <option value="ECE">ECE</option>
+          <option value="EEE">EEE</option>
+          <option value="Mech">Mech</option>
+        </select>
+      </div>
+
+      <div class="box">
+        <label for="city" class="l-w">City:</label>
+        <input
+          type="text"
+          name="city"
+          id="city"
+          placeholder="Enter your city"
+        />
+      </div>
+
+      <div class="box">
+        <label class="l-w">Gender:</label>
+        <div class="inline-group">
+          <label><input type="radio" name="gender" value="Male" /> Male</label>
+          <label
+            ><input type="radio" name="gender" value="Female" /> Female</label
+          >
+        </div>
+      </div>
+
+      <div class="box">
+        <label class="l-w">Courses:</label>
+        <div class="c-box">
+          <label
+            ><input type="checkbox" name="course" value="Python" />
+            Python</label
+          >
+          <label><input type="checkbox" name="course" value="C" /> C</label>
+          <label
+            ><input type="checkbox" name="course" value="Java" /> Java</label
+          >
+          <label
+            ><input type="checkbox" name="course" value="Javascript" />
+            JavaScript</label
+          >
+        </div>
+      </div>
+
+      <div class="submit-box">
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+  </body>
+</html>
